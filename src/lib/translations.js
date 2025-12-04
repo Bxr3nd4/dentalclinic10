@@ -43,7 +43,7 @@ export const translations = {
       description:
         "Somos un equipo de profesionales dedicados a proporcionar atención dental de calidad con un enfoque integral en la salud y bienestar de nuestros pacientes.",
       imageAlt: "Equipo Profesional",
-      experience: "15+ Años de Experiencia",
+      experience: "9+ Años de Experiencia",
       experienceDesc: "Brindando atención dental de calidad",
       equipment: "Equipamiento Moderno",
       equipmentDesc: "Última tecnología en odontología",
@@ -143,7 +143,7 @@ export const translations = {
       description:
         "We are a team of professionals dedicated to providing quality dental care with a comprehensive focus on our patients' health and well-being.",
       imageAlt: "Professional Team",
-      experience: "15+ Years of Experience",
+      experience: "9+ Years of Experience",
       experienceDesc: "Providing quality dental care",
       equipment: "Modern Equipment",
       equipmentDesc: "Latest dentistry technology",
