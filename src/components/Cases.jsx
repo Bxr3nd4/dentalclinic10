@@ -1,27 +1,19 @@
 "use client"
 
-import { useState } from "react"
 import { useLanguage } from "../context/LanguageContext"
 
 export default function Cases() {
-  const [hoveredCase, setHoveredCase] = useState(null)
   const { t } = useLanguage()
 
   const cases = t("cases.items").map((item, index) => ({
     id: index + 1,
     title: item.title,
     description: item.description,
-    before: [
-      "/dental-before-implant.jpg",
-      "/teeth-before-whitening.jpg",
-      "/teeth-before-orthodontics.jpg",
-      "/dental-before-restoration.jpg",
-    ][index],
-    after: [
-      "/dental-after-implant.jpg",
-      "/teeth-after-whitening.jpg",
-      "/teeth-after-orthodontics.jpg",
-      "/dental-after-restoration.jpg",
+    image: [
+      "/firstCase.jpg",
+      "/secondCase.jpg",
+      "/thirdCase.jpg",
+      "/fourthCase.jpg",
     ][index],
   }))
 
@@ -35,57 +27,21 @@ export default function Cases() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cases.map((caseItem) => (
-            <div
-              key={caseItem.id}
-              className="group"
-              onMouseEnter={() => setHoveredCase(caseItem.id)}
-              onMouseLeave={() => setHoveredCase(null)}
-            >
+            <div key={caseItem.id} className="group">
+
               <div className="relative rounded-lg overflow-hidden mb-4 h-64 bg-muted">
-                <div className="relative w-full h-full">
-                  <div className="absolute inset-0 overflow-hidden">
-                    <img
-                      src={caseItem.before || "/placeholder.svg"}
-                      alt="Before"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  <div
-                    className={`absolute inset-0 overflow-hidden transition-all duration-500 ${
-                      hoveredCase === caseItem.id ? "w-full" : "w-1/2"
-                    }`}
-                  >
-                    <img
-                      src={caseItem.after || "/placeholder.svg"}
-                      alt="After"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  <div
-                    className={`absolute top-0 bottom-0 w-1 bg-accent transition-all duration-500 ${
-                      hoveredCase === caseItem.id ? "right-0" : "right-1/2"
-                    }`}
-                  />
-
-                  <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    {t("cases.before")}
-                  </div>
-                  <div
-                    className={`absolute top-4 right-4 bg-accent text-foreground px-3 py-1 rounded-full text-sm font-semibold transition-opacity duration-500 ${
-                      hoveredCase === caseItem.id ? "opacity-100" : "opacity-0"
-                    }`}
-                  >
-                    {t("cases.after")}
-                  </div>
-                </div>
+                <img
+                  src={caseItem.image || "/placeholder.svg"}
+                  alt={caseItem.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
-              <div>
+              {/* <div>
                 <h3 className="font-semibold text-lg text-foreground mb-1">{caseItem.title}</h3>
                 <p className="text-sm text-foreground/60">{caseItem.description}</p>
-              </div>
+              </div> */}
+
             </div>
           ))}
         </div>

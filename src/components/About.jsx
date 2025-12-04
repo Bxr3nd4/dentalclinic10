@@ -12,7 +12,6 @@ export default function About() {
           <div className="hidden md:flex justify-center">
             <div className="w-full max-w-md aspect-square bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
               <div className="text-center">
-                <div className="text-6xl mb-4">👨‍⚕️</div>
                 <p className="text-foreground/60 text-sm">{t("about.imageAlt")}</p>
               </div>
             </div>

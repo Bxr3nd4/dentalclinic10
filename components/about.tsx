@@ -17,7 +17,7 @@ export default function About() {
           <div className="flex justify-center">
             <div className="relative w-full max-w-md aspect-square bg-primary/10 rounded-2xl border-2 border-primary/20 overflow-hidden">
               <Image
-                src="/Profesional.jpg"
+                src="/profesional2.jpg"
                 alt={t("about.imageAlt")}
                 fill
                 className="object-cover object-[50%_10%]"

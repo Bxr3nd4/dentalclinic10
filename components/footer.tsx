@@ -95,10 +95,10 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/60">
             <p>{t("footer.copyright")}</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="./privacidad" className="hover:text-accent transition-colors">
                 {t("footer.privacy")}
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="./terminos" className="hover:text-accent transition-colors">
                 {t("footer.terms")}
               </a>
             </div>
